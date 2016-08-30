@@ -1,7 +1,26 @@
 /*eslint-disable */
 var webpack = require("webpack");
 var path = require("path");
+var env = require("./bin/env");
 var rootDir = __dirname;
+var loaders = [{
+	loaders: ['babel'],
+	test: /\.(js)$/,
+	exclude: /node_modules/
+}, {
+	loaders: ["style", "css?sourceMap", "sass?sourceMap"],
+	test: /\.scss$/
+}, {
+	test: /\.jpe?g$|\.gif$|\.png$|\.ico$|\.svg$|\.woff$|\.ttf$|\.eot$/,
+	loader: "file-loader?name=[path][name]-[hash:8].[ext]&context=" + rootDir
+}];
+var plugins = [];
+if (env.env === "build") {
+} else {
+	Array.prototype.push.apply(plugins,[
+		new webpack.HotModuleReplacementPlugin()
+	])
+}
 module.exports = {
     entry: {
         app: ["./app/index.js"]
@@ -12,21 +31,9 @@ module.exports = {
     },
     devtool: "source-map",
     module: {
-        loaders: [{
-            loaders: ['babel'],
-            test: /\.(js)$/,
-            exclude: /node_modules/
-        }, {
-            loaders: ["style", "css?sourceMap", "sass?sourceMap"],
-            test: /\.scss$/
-        }, {
-            test: /\.jpe?g$|\.gif$|\.png$|\.ico$|\.svg$|\.woff$|\.ttf$|\.eot$/,
-            loader: "file-loader?name=[path][name]-[hash:8].[ext]&context=" + rootDir
-        }]
+        loaders: loaders
     },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ],
+    plugins: plugins,
 	resolve: {
         alias: {
 			"resource": path.join(__dirname, "./app/resource")
