@@ -1,4 +1,5 @@
 /*eslint-disable */
+var webpack = require("webpack");
 var path = require("path");
 var rootDir = __dirname;
 module.exports = {
@@ -13,7 +14,7 @@ module.exports = {
         loaders: [
             {
                 loaders: ['babel'],
-                test: /\.(js)$/,                
+                test: /\.(js)$/,
                 exclude: /node_modules/
             },
             {
@@ -25,6 +26,9 @@ module.exports = {
                 loader: "file-loader?name=[path][name]-[hash:8].[ext]&context=" + rootDir
             }
         ]
-    }
+    },
+	plugins: [
+		new webpack.HotModuleReplacementPlugin()
+   ]
 }
 /*eslint-enable */
