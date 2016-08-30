@@ -1,3 +1,4 @@
+/*eslint-disable */
 var webpack = require("webpack");
 var config = require("../webpack.config.js");
 var WebpackDevServer = require("webpack-dev-server");
@@ -8,3 +9,4 @@ var server = new WebpackDevServer(compiler,{
     contentBase: "./app"
 });
 server.listen(8080);
+/*eslint-enable */
