@@ -5,5 +5,8 @@ app.config(['$stateProvider','$urlRouterProvider',($stateProvider, $urlRouterPro
     $stateProvider.state('index',{
         url: '/index',
         template: require('html!./pages/index/index.html')
+    }).state('page1',{
+        url: '/page1',
+        template: require('html!./pages/page1/page1.html')
     });
 }]);
