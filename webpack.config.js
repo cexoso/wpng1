@@ -16,6 +16,9 @@ var loaders = [{
 }];
 var plugins = [];
 if (env.env === "build") {
+	Array.prototype.push.apply(plugins,[
+		new webpack.optimize.UglifyJsPlugin({})
+	])
 } else {
 	Array.prototype.push.apply(plugins,[
 		new webpack.HotModuleReplacementPlugin()

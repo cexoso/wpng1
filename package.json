@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./bin/devServer.js --env dev"
+    "dev": "node ./bin/devServer.js --env dev",
+	"build": "webpack --env build"
   },
   "author": "",
   "license": "ISC",
