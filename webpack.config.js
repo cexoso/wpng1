@@ -3,18 +3,21 @@ var webpack = require("webpack");
 var path = require("path");
 var env = require("./bin/env");
 var rootDir = __dirname;
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 var loaders = [{
 	loaders: ['babel'],
 	test: /\.(js)$/,
 	exclude: /node_modules/
 }, {
-	loaders: ["style", "css?sourceMap", "sass?sourceMap"],
+	loaders: ["style", "css?sourceMap", "resolve-url","sass?sourceMap"],
 	test: /\.scss$/
 }, {
 	test: /\.jpe?g$|\.gif$|\.png$|\.ico$|\.svg$|\.woff$|\.ttf$|\.eot$/,
 	loader: "file-loader?name=[path][name]-[hash:8].[ext]&context=" + rootDir
 }];
-var plugins = [];
+var plugins = [new HtmlWebpackPlugin({
+	template: "./app/index.html"	
+})];
 if (env.env === "build") {
 	Array.prototype.push.apply(plugins,[
 		new webpack.optimize.UglifyJsPlugin({})
@@ -30,7 +33,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "build"),
-        filename: "bundle.js"
+        filename: "[name]-[hash:8].js"
     },
     devtool: "source-map",
     module: {
