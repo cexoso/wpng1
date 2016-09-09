@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node ./bin/devServer.js --env dev",
-    "build": "webpack --env build"
+    "build": "webpack --env build",
+    "start": "node ./bin/devServer.js --env dev"
   },
   "author": "",
   "license": "ISC",
