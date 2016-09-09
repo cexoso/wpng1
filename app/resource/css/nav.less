@@ -1,0 +1,21 @@
+@import "common_var";
+@charset "utf-8";
+.nav{
+  font-size: 18px;
+  background: url("../img/nav_bg.jpg") no-repeat;
+  li{
+    a{
+      color: #fff;
+      padding: 10px 0;
+      .first-menu{
+        display: inline-block;
+        border-right: 1px solid #fff;
+        width: 100%;
+      }
+    }
+    &:last-child a .first-menu{
+      border-right: none;
+    }
+  }
+
+}

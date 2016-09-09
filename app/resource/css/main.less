@@ -1,0 +1,49 @@
+@import "common_var";
+@charset "utf-8";
+/*重置table样式*/
+.sheet{
+  .table{
+    border: 1px solid #e8e8e8;
+    color: #5d5d5c;
+    text-align: center;
+    &>thead>tr{
+      &>th{
+        background-color: #e8f5ff;
+        border-bottom: none;
+        height: 42px;
+        font-size: 16px;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+  .table-striped>tbody>tr{
+    &>td{
+      border-top: 1px solid #dfdfdf;
+      font-size: 14px;
+    }
+    &:nth-of-type(odd){
+      background-color: #fff;
+    }
+    &:nth-of-type(even){
+      background-color: #f8f8f8;
+    }
+    &:first-child>td{
+      border-top: none;
+    }
+  }
+}
+
+/*面包屑*/
+.bread-crumb{
+  background-color: #f2f2f2;
+  color: #5d5d5c;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  margin: 15px 0;
+  padding: 0 10px;
+  a{
+    color: #5d5d5c;
+  }
+}
