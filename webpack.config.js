@@ -11,12 +11,15 @@ var loaders = [{
 }, {
 	loaders: ["style", "css?sourceMap", "resolve-url","sass?sourceMap"],
 	test: /\.scss$/
+},{
+	loaders: ["style", "css?sourceMap"],
+	test: /\.css$/
 }, {
-	test: /\.jpe?g$|\.gif$|\.png$|\.ico$|\.svg$|\.woff$|\.ttf$|\.eot$/,
+	test: /\.jpe?g$|\.gif$|\.png$|\.ico$|\.svg$|\.woff$|\.woff2$|\.ttf$|\.eot$/,
 	loader: "file-loader?name=[path][name]-[hash:8].[ext]&context=" + rootDir
 }];
 var plugins = [new HtmlWebpackPlugin({
-	template: "./app/index.html"	
+	template: "./app/index.html"
 })];
 if (env.env === "build") {
 	Array.prototype.push.apply(plugins,[
