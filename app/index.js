@@ -1,5 +1,6 @@
 import app from "./init";
 import "./pages/index/index.js";
+import "./pages/page1/page1.js";
 app.config(['$stateProvider','$urlRouterProvider',($stateProvider, $urlRouterProvider) => {
     $urlRouterProvider.otherwise('/index');
     $stateProvider.state('index',{
