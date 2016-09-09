@@ -22,7 +22,6 @@
 *************************************************/
 import angular from "angular";
 import "resource/bootstrap/css/bootstrap.min.css";
-import "resource/bootstrap/css/bootstrap-theme.min.css";
 import "resource/css/base.less";
 import "resource/css/top_footer.less";
 import "resource/css/nav.less";
