@@ -4,6 +4,7 @@
   font-size: 18px;
   background: url("../img/nav_bg.jpg") no-repeat;
   li{
+    position: relative;
     a{
       color: #fff;
       padding: 10px 0;
@@ -15,6 +16,30 @@
     }
     &:last-child a .first-menu{
       border-right: none;
+    }
+    .child-menu{
+      position: absolute;
+      width: 100%;
+      background: rgba(49,139,225,0.8);
+      ul li{
+        padding: 0 5px;
+        a{
+          color: #fff;
+          display: block;
+          height: 38px;
+          line-height: 38px;
+          text-align: center;
+          padding: 0;
+          border-bottom: 1px dotted #fff;
+          font-size: 14px;
+        }
+        &:last-child a{
+          border-bottom: none;
+        }
+        &:hover{
+          background: rgba(49,139,225,1);
+        }
+      }
     }
   }
   &>li>a:focus, &>li>a:hover{
