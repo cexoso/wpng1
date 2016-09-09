@@ -1,0 +1,36 @@
+@import "common_var";
+@charset "utf-8";
+.index_main{
+  .user_style{
+    border: 1px solid #fafafa;
+  }
+  .medical_users{
+    border-bottom: 1px solid #ddd;
+  }
+  .medical_users, .center_users{
+    display: table;
+    width: 100%;
+    padding: 30px 80px;
+    .user_icon{
+      width: 96px;
+    }
+    .user_icon, .user_info{
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 10px;
+      .title{
+        font-size: 18px;
+        color: #686868;
+        padding-bottom: 25px;
+        font-weight: bold;
+      }
+      .info{
+        font-size: 16px;
+        color: #434343;
+        a{
+          color: #f26816;
+        }
+      }
+    }
+  }
+}
