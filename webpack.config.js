@@ -12,6 +12,9 @@ var loaders = [{
 	loaders: ["style", "css?sourceMap", "resolve-url","sass?sourceMap"],
 	test: /\.scss$/
 },{
+	test: /\.less$/,
+	loaders: ["style","css","less"]
+},{
 	loaders: ["style", "css?sourceMap"],
 	test: /\.css$/
 }, {

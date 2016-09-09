@@ -1,5 +1,6 @@
 import angular from "angular";
 import "./index.scss";
+import "./index.less";
 import a from "resource/img/e.jpg";
 import aa from "../../resource/img/e.jpg";
 
