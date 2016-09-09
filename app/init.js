@@ -21,8 +21,9 @@
 *         佛祖保佑       永无BUG					*
 *************************************************/
 import angular from "angular";
-import "resource/css/bootstrap.min.css";
-import "resource/css/bootstrap-theme.min.css";
-import "angular-ui-bootstrap"
-import "angular-ui-router"
+import "resource/bootstrap/css/bootstrap.min.css";
+import "resource/bootstrap/css/bootstrap-theme.min.css";
+import "resource/css/base.less";
+import "angular-ui-bootstrap";
+import "angular-ui-router";
 export default angular.module('app', ['ui.router','ui.bootstrap']);

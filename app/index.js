@@ -1,6 +1,7 @@
 import app from "./init";
 import "./pages/index/index.js";
 import "./pages/page1/page1.js";
+import "./pages/ws/wsCtrl.js";
 app.config(['$stateProvider','$urlRouterProvider',($stateProvider, $urlRouterProvider) => {
     $urlRouterProvider.otherwise('/index');
     $stateProvider.state('index',{
@@ -9,5 +10,8 @@ app.config(['$stateProvider','$urlRouterProvider',($stateProvider, $urlRouterPro
     }).state('page1',{
         url: '/page1',
         template: require('html!./pages/page1/page1.html')
+    }).state('ws',{
+        url: '/ws',
+        template: require('html!./pages/ws/ws.html')
     });
 }]);
