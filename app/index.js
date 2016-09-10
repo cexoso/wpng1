@@ -1,4 +1,5 @@
 import app from "./init";
+import "./js/service.js";
 import "./pages/index/index.js";
 import "./pages/page1/page1.js";
 import "./pages/ws/wsCtrl.js";
@@ -6,12 +7,15 @@ app.config(['$stateProvider','$urlRouterProvider',($stateProvider, $urlRouterPro
     $urlRouterProvider.otherwise('/index');
     $stateProvider.state('index',{
         url: '/index',
-        template: require('html!./pages/index/index.html')
+        template: require('html!./pages/index/index.html'),
+        controller: "indexCtrl"
     }).state('page1',{
         url: '/page1',
-        template: require('html!./pages/page1/page1.html')
+        template: require('html!./pages/page1/page1.html'),
+        controller: "AccordionDemoCtrl"
     }).state('ws',{
         url: '/ws',
-        template: require('html!./pages/ws/ws.html')
+        template: require('html!./pages/ws/ws.html'),
+        controller: "wsCtrl"
     });
 }]);

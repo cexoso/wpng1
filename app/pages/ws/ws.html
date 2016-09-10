@@ -16,20 +16,20 @@
 <div class="banner">
     <div class="container">
         <div class="row">
-            <img src="../../resource/img/banner.jpg" alt="" />
+            <img src="/resource/img/banner.jpg" alt="" />
         </div>
     </div>
 </div>
-<div id="nav">
+<div>
     <div class="container">
         <div class="row">
-            <ul class="nav nav-pills nav-justified nav_bg"><!--  nav-justified 两端对齐  -->
+            <ul class="nav nav-pills nav-justified nav_bg">
                 <li>
                     <a href=""><span class="first-menu">首页</span></a>
                 </li>
-                <li>
+                <li ce-menu>
                     <a href=""><span class="first-menu">卫生机构</span></a>
-                    <div class="child-menu">
+                    <div ng-show="menuShow" class="child-menu">
                         <ul>
                             <li>
                                 <a>区域统计</a>
