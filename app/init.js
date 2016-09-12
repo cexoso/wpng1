@@ -28,4 +28,5 @@ import "resource/css/nav.less";
 import "resource/css/main.less";
 import "angular-ui-bootstrap";
 import "angular-ui-router";
-export default angular.module('app', ['ui.router','ui.bootstrap']);
+import components from "./components/components.js";
+export default angular.module('app', ['ui.router','ui.bootstrap',components]);
