@@ -6,17 +6,20 @@ export default function (components) {
 			template: tpl,
 			scope: {
 				data: "=",
-				ngModel: "="
+				ngModel: "=",
+				textField: "@",
+				valueField: "@"
 			},
 			controller: ["$scope",($scope)=>{
 				$scope.showCombobox = false;
+				const {valueField} = $scope;
 				$scope.comboxClickHandle = function () {
 					$scope.showCombobox = !$scope.showCombobox;
 				}
 				$scope.onChose = function (d) {
-					console.log(d)
+					$scope.checkItem = d;
 					$scope.showCombobox = false;
-					$scope.ngModel = d;
+					$scope.ngModel = valueField === void 0 ? d : d[valueField];
 				}
 			}]
         }
