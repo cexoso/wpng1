@@ -171,35 +171,11 @@
                     </tbody>
                 </table>
             </div>
-            <nav class="pagination-size">
-                <ul class="pagination">
-                    <li><a href="#">首页</a></li>
-                    <li class="disabled"><a href="#">上一页</a></li>
-                    <li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">下一页</a></li>
-                    <li><a href="#">尾页</a></li>
-                </ul>
-                <div class="page_size_options clearfix">
-                    <span class="fl lh30">每页记录：</span>
-                    <div class="select fl">
-                        <div class="select-inner">
-                            <input type="text" class="select-text" readonly/>
-                            <span class="select-icon"><i class="select-icon-arrow"></i></span>
-                        </div>
-                        <div class="select-sub">
-                            <a>111</a>
-                            <a>222</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="page_total">
-                    总记录数：148，总页数：8，当前为第1页
-                </div>
-            </nav>
+			<div ce-pagination
+				 current-page="pagination.currentPage"
+				 total="pagination.total"
+				 num-per-page="pagination.numPerPage"
+			/>
         </div>
     </div>
 </div>

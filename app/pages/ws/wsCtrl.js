@@ -29,4 +29,9 @@ angular.module('app').controller("wsCtrl", ["$scope", ($scope) => {
 		name: 4,
 		value: 4
 	}]
+	$scope.pagination = {
+		currentPage: 1,
+		numPerPage: 10,
+		total: 100
+	}
 }])
