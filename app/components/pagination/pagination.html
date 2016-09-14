@@ -26,18 +26,9 @@
 	</ul>
 	<div class="page_size_options clearfix">
 		<span class="fl lh30">每页记录：</span>
-		<div class="select fl">
-			<div class="select-inner">
-				<input type="text" class="select-text" readonly ng-model="numPerPage"/>
-				<span class="select-icon"><i class="select-icon-arrow"></i></span>
-			</div>
-			<div class="select-sub">
-				<a>111</a>
-				<a>222</a>
-			</div>
-		</div>
+		<div class="select fl" ng-model="numPerPage" data="numPerPages" ce-combobox />
 	</div>
 	<div class="page_total">
-		总记录数：148，总页数：8，当前为第1页
+		总记录数：{{total}}，总页数：{{totalPage}}，当前为第{{currentPage}}页 
 	</div>
 </nav>

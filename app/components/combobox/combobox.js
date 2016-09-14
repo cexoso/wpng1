@@ -1,5 +1,7 @@
 import angular from "angular";
 import tpl from "html!./combobox.html";
+import {find} from "../../js/util.js";
+
 export default function (components) {
     angular.module(components).directive('ceCombobox',[()=>{
         return {
@@ -16,6 +18,12 @@ export default function (components) {
 				$scope.comboxClickHandle = function () {
 					$scope.showCombobox = !$scope.showCombobox;
 				}
+				$scope.$watch("ngModel",n=>{
+					if (n !== void 0) {
+						const d = find($scope.data,item=>(n === (valueField === void 0 ? item : item[valueField]))) || $scope.data[0];
+						$scope.checkItem = d;
+					}
+				})
 				$scope.onChose = function (d) {
 					$scope.checkItem = d;
 					$scope.showCombobox = false;
