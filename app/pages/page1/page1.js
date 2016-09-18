@@ -1,14 +1,14 @@
 import angular from "angular";
 angular.module('app').controller("AccordionDemoCtrl", ["$scope", "modal",($scope,modal) => {
-	modal.open({
-		controller: "modalCtrl"
-	});
-	// $scope.open = function () {
-	// 	modal.open({
-	// 		controller: "modalCtrl"
-	// 	});
-	// }
-}]).controller("modalCtrl",["$scope",($scope)=>{
-	console.log($scope)
+	$scope.open = function () {
+		modal.open({
+			controller: "modalCtrl",
+			template: "<h1>{{q}}</h1>"
+		});
+	}
+}]).controller("modalCtrl",["$scope","modalInstance",($scope,modalInstance)=>{
 	$scope.q = 1;
+	setTimeout(()=>{
+		modalInstance.close();
+	},100000);
 }]);
