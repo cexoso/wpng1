@@ -3,6 +3,7 @@ import "./js/service.js";
 import "./pages/index/index.js";
 import "./pages/page1/page1.js";
 import "./pages/ws/wsCtrl.js";
+import "./pages/login/loginCtrl.js";
 app.config(['$stateProvider','$urlRouterProvider',($stateProvider, $urlRouterProvider) => {
     $urlRouterProvider.otherwise('/index');
     $stateProvider.state('index',{
@@ -17,5 +18,9 @@ app.config(['$stateProvider','$urlRouterProvider',($stateProvider, $urlRouterPro
         url: '/ws',
         template: require('html!./pages/ws/ws.html'),
         controller: "wsCtrl"
+    }).state('login',{
+        url: '/login',
+        template: require('html!./pages/login/login.html'),
+        controller: "loginCtrl"
     });
 }]);
