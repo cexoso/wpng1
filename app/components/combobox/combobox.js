@@ -4,6 +4,14 @@ import {find} from "../../js/util.js";
 
 export default function (components) {
     angular.module(components).directive('ceCombobox',[()=>{
+		const body = angular.element(document.getElementsByTagName("body")[0]);
+		let showingItem = [];
+		function bodyClickHandle() {
+			showingItem = showingItem.filter(item=>{
+				item.$apply(()=>{item.showCombobox = false});
+			});
+		}
+		body.on("click",bodyClickHandle);
         return {
 			template: tpl,
 			scope: {
@@ -16,14 +24,19 @@ export default function (components) {
 				$scope.showCombobox = false;
 				const {valueField} = $scope;
 				$scope.comboxClickHandle = function () {
-					$scope.showCombobox = !$scope.showCombobox;
+					if (!$scope.showCombobox) {
+						$scope.showCombobox = true;
+						setTimeout(()=>{
+							showingItem.push($scope);
+						},0);
+					}
 				}
 				$scope.$watch("ngModel",n=>{
 					if (n !== void 0) {
 						const d = find($scope.data,item=>(n === (valueField === void 0 ? item : item[valueField]))) || $scope.data[0];
 						$scope.checkItem = d;
 					}
-				})
+				});
 				$scope.onChose = function (d) {
 					$scope.checkItem = d;
 					$scope.showCombobox = false;
