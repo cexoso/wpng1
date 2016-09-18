@@ -19,3 +19,6 @@ export function find(arr = [],fn) {
 	}
 	return null;
 }
+export function map(arr,fn) {
+	return arr.map(fn);
+}
