@@ -1,7 +1,7 @@
 import angular from "angular";
 
 
-angular.module('app').controller("AccordionDemoCtrl", ["$scope", ($scope) => {
+angular.module('app').controller("AccordionDemoCtrl", ["$scope", "$uibModal",($scope,$uibModal) => {
     $scope.oneAtATime = true;
     $scope.groups = [{
         title: 'Dynamic Group Header - 1',
@@ -23,4 +23,35 @@ angular.module('app').controller("AccordionDemoCtrl", ["$scope", ($scope) => {
         isFirstOpen: true,
         isFirstDisabled: false
     };
-}]);
+	console.log($uibModal)
+	$scope.open = function () {
+		$uibModal.open({
+			animation: true,
+			ariaLabelledBy: 'modal-title',
+			ariaDescribedBy: 'modal-body',
+			template: '<h1>hello</h1>',
+			controller: 'ModalInstanceCtrl',
+			size: "small",
+			resolve: {
+				items() {
+					return 111;
+				}
+			}
+		})
+	}
+}]).controller('ModalInstanceCtrl', function ($uibModalInstance, items) {
+	console.log(123123123)
+  const $ctrl = this;
+  $ctrl.items = items;
+  $ctrl.selected = {
+    item: $ctrl.items[0]
+  };
+
+  $ctrl.ok = function () {
+    $uibModalInstance.close($ctrl.selected.item);
+  };
+
+  $ctrl.cancel = function () {
+    $uibModalInstance.dismiss('cancel');
+  };
+});
