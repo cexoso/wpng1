@@ -20,6 +20,9 @@
 <div class="login-main">
     <div class="container">
         <div class="login-user row">
+            <div class="login-map">
+                <img src="/resource/img/login_map.png" alt="" />
+            </div>
             <div class="bubble">
                 <div class="rectangle">
                     <p>用户登录</p>
@@ -28,15 +31,15 @@
                     <div class="login-group">
                         <div class="login-line">
                             <i class="iconfont icon-name"></i>
-                            <input class=" input-text" placeholder="账号"/>
+                            <input class="form-control input-text" placeholder="账号"/>
                         </div>
                         <div class="login-line">
                             <i class="iconfont icon-key"></i>
-                            <input class=" input-text" placeholder="密码"/>
+                            <input class="form-control input-text" placeholder="密码"/>
                         </div>
                     </div>
                     <div class="verify_code clearfix">
-                        <input class=" input-text fl" placeholder="请输入验证码"/>
+                        <input class="form-control input-text fl" placeholder="请输入验证码"/>
                         <span class="verify-img fl">
                             <img alt="验证码" id="verify_code_img" class="cursor" src="">
                         </span>
@@ -46,8 +49,11 @@
                     </div>
                     <div class="pass-remember clearfix">
                         <div class="checkbox fl">
-                            <input type="checkbox" id="remember" value="1">
-                            <label for="remember">下次自动登录</label>
+                            <label class="check-label">
+                                <input type="checkbox" ng-model="auto">
+                                <span class="check-item">&nbsp;</span>
+                                <span>下次自动登录</span>
+                            </label>
                         </div>
                         <a class="forgot_link fr">
                             忘记密码？

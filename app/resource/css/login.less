@@ -36,11 +36,19 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   }
 }
 .login-main{
-  background-color: #58acff;
-  padding: 40px 0;
+  background-color: #1f7eff;
+  padding: 48px 0 100px;
   .login-user{
-    background: url("../img/login_map.png") left center no-repeat;
-    background-size: auto;
+    position: relative;
+    .login-map{
+      position: absolute;
+      width: 1106px;
+      height: 652px;
+      left: -20%;
+      z-index: 1;
+      img{
+      }
+    }
     .bubble {
       clear:both;
       float: right;
@@ -57,10 +65,11 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
       z-index: 90;
       background-color: #fff;
       padding-bottom: 40px;
+      z-index: 2;
     }
     .rectangle {
       background: #f7f7f7;
-      height: 60px;
+      height: 70px;
       width: 500px;
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -77,9 +86,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     }
     .rectangle p {
       font-size: 20px;
-      color: #868686;
+      color: #626161;
       text-align: center;
-      line-height: 50px;
+      line-height: 70px;
     }
     /*left*/
     .bubble:after {
@@ -90,7 +99,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
       width: 0px;
       position: absolute;
       left: -30px;
-      top: 42px;
+      top: 53px;
       z-index: -1;
     }
     .bubble:before {
@@ -101,7 +110,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
       width: 0;
       position: absolute;
       right: -30px;
-      top: 42px;
+      top: 53px;
       z-index: -1;
     }
     .login-form {
@@ -109,8 +118,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
       .btn{
         height: 50px;
         font-size: 16px;
-        background-color: #58acff;
-        border-color: #58acff;
+        background-color: #1f7eff;
+        border-color: #1f7eff;
         margin-top: 30px;
       }
       .login-group{
