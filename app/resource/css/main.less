@@ -37,6 +37,18 @@
 }
 table td{
   padding: 0 5px;
+  position: relative;
+  .formSubmit-remind{
+    position: absolute;
+    left: 0;
+    top: 35px;
+    color: #ff7b23;
+    font-size: 12px;
+    i{
+      font-size: 14px;
+      margin-right: 2px;
+    }
+  }
 }
 /*面包屑*/
 .bread-crumb{
@@ -63,6 +75,16 @@ table td{
   border-color: #2485ce;
   padding: 3px 8px;
   border-radius: 2px;
+}
+.btn.btn-green{
+  color: #fff;
+  background-color: #0697fc;
+  border-color: #0697fc;
+}
+.btn.btn-orange{
+  color: #fff;
+  background-color: #ff7b23;
+  border-color: #ff7b23;
 }
 /*input*/
 .form-control{
@@ -145,4 +167,14 @@ table td{
   transition: border 0.2s linear 0s, color 0.2s linear 0s;
   width: 14px;
   box-sizing: border-box;
+}
+
+/*验证码*/
+.verify-img{
+  display: inline-block;
+  margin: 0 20px;
+  width: 150px;
+  height: 40px;
+  background-color: #fffcf2;
+  border: 1px solid #d9d498;
 }
