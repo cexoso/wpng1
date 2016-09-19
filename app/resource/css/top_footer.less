@@ -56,7 +56,10 @@
 .logo-top{
   height: 98px;
   line-height: 98px;
-  box-shadow: 11px 0 13px #888;
+  -moz-box-shadow: 0px 0px 8px rgba(218,218,218,.75);
+  -khtml-box-shadow: 0px 0px 8px rgba(218,218,218,.75);
+  -webkit-box-shadow: 0px 0px 8px rgba(218,218,218,.75);
+  box-shadow: 0px 0px 8px rgba(218,218,218,.75);
   .logo-img{
     img{
       width: 100%;
@@ -73,6 +76,17 @@
     .right-item{
       margin-left:35px;
       float: left;
+    }
+    .btn-return{
+      height: 30px;
+      font-size: 14px;
+      border-radius: 15px;
+      background-color: #1f7eff;
+      color: #fff;
+      padding: 0 12px;
+      &:active, &:focus{
+        border: none;
+      }
     }
   }
 }

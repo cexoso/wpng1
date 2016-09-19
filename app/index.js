@@ -4,6 +4,7 @@ import "./pages/index/index.js";
 import "./pages/page1/page1.js";
 import "./pages/ws/wsCtrl.js";
 import "./pages/login/loginCtrl.js";
+import "./pages/orgReg/orgRegCtrl.js";
 app.config(['$stateProvider','$urlRouterProvider',($stateProvider, $urlRouterProvider) => {
     $urlRouterProvider.otherwise('/index');
     $stateProvider.state('index',{
@@ -22,5 +23,9 @@ app.config(['$stateProvider','$urlRouterProvider',($stateProvider, $urlRouterPro
         url: '/login',
         template: require('html!./pages/login/login.html'),
         controller: "loginCtrl"
+    }).state('orgReg',{
+        url: '/orgReg',
+        template: require('html!./pages/orgReg/orgReg.html'),
+        controller: "orgRegCtrl"
     });
 }]);
