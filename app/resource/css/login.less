@@ -114,13 +114,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
       z-index: -1;
     }
     .login-form {
-      padding: 50px 27px;
-      .btn{
+      padding: 50px 27px 0;
+      .btn-login{
         height: 50px;
         font-size: 16px;
         background-color: #1f7eff;
         border-color: #1f7eff;
-        margin-top: 30px;
+        color: #fff;
       }
       .login-group{
         border: 1px solid #ababab;
@@ -134,7 +134,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
         }
       }
       .verify_code{
-        margin-top: 20px;
+        margin-top: 25px;
         .input-text{
           display: inline-block;
           width: 40%;
@@ -173,15 +173,33 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
       .pass-remember{
         font-size: 12px;
         color: #a6a5a5;
-        margin-top: 10px;
         .forgot_link{
           color: #1f7eff;
           font-size: 12px;
           line-height: 40px;
           text-decoration: underline;
-          margin: 10px 0;
         }
       }
+    }
+  }
+}
+.login-bottom-btn{
+  border-top: 5px solid #f3f3f3;
+  margin-top: 10px;
+  padding: 10px 27px 0;
+  .btn{
+    color: #fff;
+    border-radius: 80px;
+    height: 45px;
+    width: 196px;
+    &.btn-apply{
+      background-color: #ffcb4d;
+      border-color: #ffcb4d;
+    }
+    &.btn-register{
+      background-color: #ff5c2a;
+      border-color: #ff5c2a;
+      margin-left: 20px;
     }
   }
 }
