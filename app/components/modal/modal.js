@@ -14,8 +14,10 @@ export default function (components) {
         function open(html,scope,div) {
             div.attr("window_id",windows.length);
             div.html(html);
-            div.css("zIndex",windows);
-            windows.push(div);
+			//getMaxIndex
+			const index = (windows[windows.length - 1] ? windows[windows.length - 1].index : 2000) + 1
+            div.css("zIndex",index);
+            windows.push({div,index});
             body.after(ModalBg);//插入ModalBg
             body.after(div);
             $compile(div)(scope);

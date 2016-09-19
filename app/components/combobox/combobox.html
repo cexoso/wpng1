@@ -2,6 +2,6 @@
 	<input type="text" class="select-text" readonly ng-value="textField ? checkItem[textField] : checkItem"/>
 	<span class="select-icon" ng-click="comboxClickHandle()"><i class="select-icon-arrow"></i></span>
 </div>
-<div class="select-sub" ng-show="showCombobox">
+<div class="select-sub" ng-class="showCombobox ? 'combobox_show' : 'combobox_hide'">
 	<a ng-repeat="d in data" ng-click="onChose(d)">{{textField ? d[textField] : d}}</a>
 </div>
