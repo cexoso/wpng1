@@ -230,7 +230,7 @@ table td{
 .checkbox label, .checkbox span {
   display: inline-block;
   font-size: 12px;
-  padding-left: 18px;
+  padding-left: 0;
   position: relative;
   line-height: 20px;
   transition: border 0.2s linear 0s;
@@ -238,12 +238,15 @@ table td{
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
+  &.check-item{
+    padding-left: 12px;
+  }
 }
-.checkbox input[type="checkbox"]:checked + label:before, .checkbox input[type="checkbox"]:checked + span:before {
+.checkbox input[type="checkbox"]:checked + .check-item:before {
   border-width: 7px;
   border-color: #2485ce;
 }
-.checkbox label:before, .checkbox span:before {
+.checkbox .check-item:before {
   background-color: #fff;
   border: 1px solid #d9d9d9;
   content: "";
@@ -258,7 +261,7 @@ table td{
   transition: border 0.2s linear 0s, color 0.2s linear 0s;
   box-sizing: border-box;
 }
-.checkbox input[type="checkbox"]:checked + label:after, .checkbox input[type="checkbox"]:checked + span:after {
+.checkbox input[type="checkbox"]:checked + .check-item:after {
   content: '';
   width: 10px;
   height: 5px;
@@ -274,7 +277,7 @@ table td{
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.checkbox label:after, .checkbox span:after {
+.checkbox .check-item:after {
   display: inline-block;
   font-size: 11px;
   height: 14px;
