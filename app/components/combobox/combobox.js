@@ -1,7 +1,7 @@
 import angular from "angular";
 import tpl from "html!./combobox.html";
 import {find} from "../../js/util.js";
-
+import "./combobox.less";
 export default function (components) {
     angular.module(components).directive('ceCombobox',[()=>{
 		const body = angular.element(document.getElementsByTagName("html")[0]);
