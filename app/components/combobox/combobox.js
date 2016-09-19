@@ -4,7 +4,7 @@ import {find} from "../../js/util.js";
 
 export default function (components) {
     angular.module(components).directive('ceCombobox',[()=>{
-		const body = angular.element(document.getElementsByTagName("body")[0]);
+		const body = angular.element(document.getElementsByTagName("html")[0]);
 		let showingItem = [];
 		function bodyClickHandle() {
 			showingItem = showingItem.filter(item=>{
