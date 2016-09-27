@@ -1,5 +1,5 @@
 import angular from "angular";
-import "resource/css/login.less";
+import "./css/login.less";
 
 angular.module('app').controller("loginCtrl",["$scope",($scope)=>{
 }]);

@@ -1,6 +1,7 @@
 import angular from "angular";
 import tpl from "html!./pagination.html";
 import {range,min,max} from "../../js/util.js";
+import "./pagination.less";
 export default function (components) {
     angular.module(components).directive('cePagination',[()=>{
         return {

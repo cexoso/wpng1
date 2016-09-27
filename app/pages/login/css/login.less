@@ -1,4 +1,4 @@
-@import "common_var";
+@import "../../../resource/css/common_var";
 @charset "utf-8";
 
 .form-control::-webkit-input-placeholder,
@@ -13,28 +13,7 @@
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background-color: transparent;
 }
-.login-top{
-  height: 98px;
-  line-height: 98px;
-  .logo-img{
-    img{
-      width: 100%;
-    }
-  }
-  .right-info{
-    color: #aea8a8;
-    font-size: 14px;
-    float: right;
-    i{
-      color: #acacac;
-      font-size: 32px;
-    }
-    .right-item{
-      margin-left:35px;
-      float: left;
-    }
-  }
-}
+
 .login-main{
   background-color: #1f7eff;
   padding: 48px 0 100px;
@@ -57,10 +36,10 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
       -webkit-border-radius: 4px;
       -khtml-border-radius: 4px;
       border-radius: 4px;
-      -moz-box-shadow: 0px 0px 8px rgba(190,190,190,0.54);
-      -khtml-box-shadow: 0px 0px 8px rgba(190,190,190,0.54);
-      -webkit-box-shadow: 0px 0px 8px rgba(190,190,190,0.54);
-      box-shadow: 0px 0px 8px rgba(190,190,190,0.54);
+      -moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.54);
+      -khtml-box-shadow: 0px 0px 8px rgba(0,0,0,0.54);
+      -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.54);
+      box-shadow: 0px 0px 8px rgba(0,0,0,0.54);
       position: relative;
       z-index: 90;
       background-color: #fff;
@@ -114,13 +93,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
       z-index: -1;
     }
     .login-form {
-      padding: 50px 27px;
-      .btn{
+      padding: 50px 27px 0;
+      .btn-login{
         height: 50px;
         font-size: 16px;
         background-color: #1f7eff;
         border-color: #1f7eff;
-        margin-top: 30px;
+        color: #fff;
       }
       .login-group{
         border: 1px solid #ababab;
@@ -134,7 +113,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
         }
       }
       .verify_code{
-        margin-top: 20px;
+        margin-top: 25px;
         .input-text{
           display: inline-block;
           width: 40%;
@@ -142,14 +121,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
           line-height: 40px;
           border: 1px solid #ababab;
           padding: 0 27px;
-        }
-        .verify-img{
-          display: inline-block;
-          margin: 0 20px;
-          width: 150px;
-          height: 40px;
-          background-color: #fffcf2;
-          border: 1px solid #d9d498;
         }
         .code-freshen{
           cursor: pointer;
@@ -173,15 +144,54 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
       .pass-remember{
         font-size: 12px;
         color: #a6a5a5;
-        margin-top: 10px;
         .forgot_link{
           color: #1f7eff;
           font-size: 12px;
           line-height: 40px;
           text-decoration: underline;
-          margin: 10px 0;
         }
       }
+    }
+  }
+}
+.login-bottom-btn{
+  border-top: 5px solid #f3f3f3;
+  margin-top: 10px;
+  padding: 10px 27px 0;
+  .btn{
+    color: #fff;
+    border-radius: 80px;
+    height: 45px;
+    width: 196px;
+    font-size: 16px;
+    position: relative;
+    line-height: 30px;
+    padding: 6px 0 6px 6px;
+    &.btn-apply{
+      background-color: #ffcb4d;
+      border-color: #ffcb4d;
+    }
+    &.btn-register{
+      background-color: #ff5c2a;
+      border-color: #ff5c2a;
+      margin-left: 20px;
+    }
+    .icon-circle{
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .icon-apply{
+      color: #ffcb4d;
+    }
+    .icon-orgRegister{
+      color: #ff5c2a;
+    }
+    .icon-right{
+      font-size: 20px;
     }
   }
 }

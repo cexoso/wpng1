@@ -1,0 +1,117 @@
+<div class="logo-top">
+    <div class="container clearfix">
+        <div class="row">
+            <div class="logo-img fl">
+                <img src="/resource/img/logo.png" alt="">
+            </div>
+            <div class="right-info clearfix">
+                <button type="button" class="btn btn-return">返回首页</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="orgReg_main">
+    <div class="container">
+        <div class="orgRge_form">
+            <p class="title">证书在线申请</p>
+            <div class="reg_step clearfix">
+                <div class="step_item">
+                    <p class="step_title">1.信息录入</p>
+                    <span class="step_icon"><i class="iconfont icon-inputInfo"></i></span>
+                    <p class="step_mark">(人员基本信息录入或者导入)</p>
+                </div>
+                <div class="step_item">
+                    <p class="step_title">2.数据汇总</p>
+                    <span class="step_icon"><i class="iconfont icon-dataSum"></i></span>
+                    <p class="step_mark">(人员基本信息录入或者导入)</p>
+                </div>
+                <div class="step_item">
+                    <p class="step_title">3.中心审批</p>
+                    <span class="step_icon"><i class="iconfont icon-approval"></i></span>
+                    <p class="step_mark">(人员基本信息录入或者导入)</p>
+                </div>
+                <div class="step_item">
+                    <p class="step_title">4.证书制作</p>
+                    <span class="step_icon"><i class="iconfont icon-makeCRL"></i></span>
+                    <p class="step_mark">(人员基本信息录入或者导入)</p>
+                </div>
+                <div class="step_line"></div>
+            </div>
+            <div class="reg_info">
+                <table width="100%">
+                    <tr>
+                        <td align="right">所属区域</td>
+                        <td width="400">
+                            <div class="select" ng-model="c1" text-field="name" value-field="value" data="data1" ce-combobox />
+                        </td>
+                        <td>
+                            <div class="input_mark">
+                                申请机构所属区域
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">申请机构</td>
+                        <td width="400">
+                            <input type="text" class="form-control input-text">
+                        </td>
+                        <td>
+                            <div class="input_mark">
+                                申请机构根据所属区域变化
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">认证机构</td>
+                        <td width="400">
+                            <input type="text" class="form-control input-text">
+                        </td>
+                        <td>
+                            <div class="input_mark">
+                                已通过审批的认证机构
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">用户名称</td>
+                        <td width="400">
+                            <input type="text" class="form-control input-text">
+                            <div class="formSubmit-remind">
+                                <i class="iconfont icon-remind"></i>
+                                用户名称不能为空
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input_mark">
+                                注册人姓名
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">验证码</td>
+                        <td width="400">
+                            <input type="text" class="form-control input-text">
+                        </td>
+                        <td>
+                            <span class="verify-img fl">
+                                <img alt="验证码" class="cursor" src="">
+                            </span>
+                            <span class="code-freshen fl">
+                                看不清
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <div class="form-btm">
+                    <button type="button" class="btn btn-green">提交</button>
+                    <button type="button" class="btn btn-orange">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer bg-footer">
+    <p>版权所有 深圳市医学信息中心 All Rights Reserved </p>
+    <p>主办：深圳市医学信息中心 技术支持单位：深圳市圣格灵科技有限公司 </p>
+    <p>网站维护电话：23972336，18126548224 在线支持：2532081191 </p>
+</div>

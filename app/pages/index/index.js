@@ -1,5 +1,5 @@
 import angular from "angular";
-import "resource/css/index.less";
+import "./css/index.less";
 import a from "resource/img/e.jpg";
 import aa from "../../resource/img/index_banner.jpg";
 
