@@ -19,14 +19,8 @@ function get(url) {
 get("http://hr.tuputech.com/recruit/v2/tree?seed=" + seed).then(function(body) {	
 	body = JSON.parse(body)
 	var treeId = body.treeId;	
-	var tree = body.tree;
-	console.log("tree");
-	console.log(JSON.stringify(tree));
-	console.log("tree end");
-	getAns(tree).then(function(p) {
-		console.log("result");
-		console.log(JSON.stringify(p));
-		console.log("result end");
+	var tree = body.tree;	
+	getAns(tree).then(function(p) {		
 		var params = {
 			treeId: treeId,
 			result: p,
@@ -41,6 +35,7 @@ get("http://hr.tuputech.com/recruit/v2/tree?seed=" + seed).then(function(body) {
 },function(rej) {
 	console.log(rej);
 })
+
 var cachePost = (function () {
 	var cache = {}
 	return function (type) {
@@ -57,8 +52,7 @@ var cachePost = (function () {
 function post(url,data) {
 	var promise = new Promise(function(resolve,reject) {
 		request({
-			method: "post",
-			headers: {"Connection": "close"},
+			method: "post",			
 			url: url,
 			json: true,
 			body: data
@@ -72,15 +66,16 @@ function post(url,data) {
 	});
 	return promise;	
 }
-
-function getAns(node) {
+function getAns(node) {	
 	var type = node.type;	
 	var promise = new Promise(function(resolve,reject) {
 		var promises = [];
-		var o = {};		
+		var o = {};
 		var promise = cachePost(type).then(function(res) {
-			o.result = res;
+			o.result = res + "";
 			return res;
+		},function() {
+			console.log("fail")
 		})
 		promises.push(promise);
 		var child = node.child || [];
@@ -89,7 +84,7 @@ function getAns(node) {
 				return getAns(item).then(function(r) {					
 					return r;
 				});
-			})).then(function(res) {
+			})).then(function(res) {				
 				o.child = res
 			},function(rej) {
 				reject(rej);
