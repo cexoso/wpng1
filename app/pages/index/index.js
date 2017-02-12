@@ -1,6 +1,7 @@
 import angular from "angular";
 import "./css/index.less";
 import _ from "lodash";
+
 const tpl = require("html!./tpl.html");
 const nodeCtrl = ["$scope", (s) => {
 	const {isEmpty} = _;
