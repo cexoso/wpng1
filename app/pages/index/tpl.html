@@ -1,4 +1,4 @@
-<div ng-controller="nodeCtrl">    
+<div ng-controller="nodeCtrl" style="margin-left: 25px">    
     <span ng-show="hasChilren(data)" ng-click="data.isClose = !data.isClose">
         <span ng-show="!data.isClose" style="font-size: 20px;">+</span>
         <span ng-show="data.isClose" style="font-size: 20px;">-</span>
@@ -6,11 +6,11 @@
     <span>        
         <input-m change="change(data,data.selected)" model="data.selected">   
     </span>    
-    {{data.name}}
-    <div ng-repeat="data1 in data.org" ng-init="father = data">        
+    {{level}} {{data.name}} 
+    <div ng-repeat="data1 in data.org" ng-init="father = data;level = level + 1;">        
         <include tpl="father.isClose ? tpl : ''" ng-init="data = data1"></include>        
     </div>
-    <div ng-repeat="data1 in data.proj" ng-init="father = data">        
+    <div ng-repeat="data1 in data.proj" ng-init="father = data;level = level + 1;">        
         <include tpl="father.isClose ? tpl : ''" ng-init="data = data1"></include>        
     </div>
 </div>
